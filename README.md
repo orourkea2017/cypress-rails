@@ -1,3 +1,5 @@
+A fork of cypress-rails, reset to v0.3.0, using rails 5.
+
 # cypress-rails
 
 [![CircleCI](https://circleci.com/gh/testdouble/cypress-rails/tree/master.svg?style=svg)](https://circleci.com/gh/testdouble/cypress-rails/tree/master)
