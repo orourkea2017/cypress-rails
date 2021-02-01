@@ -21,6 +21,7 @@ module CypressRails
       end
       server = @starts_rails_server.call(
         port: config.port,
+        host: config.host,
         transactional_server: config.transactional_server
       )
       bin = @finds_bin.call(config.dir)

@@ -5,6 +5,7 @@ module CypressRails
     def initialize(
       dir: Env.fetch("CYPRESS_RAILS_DIR", default: Dir.pwd),
       port: Env.fetch("CYPRESS_RAILS_PORT"),
+      host: Env.fetch("CYPRESS_RAILS_HOST"),
       base_path: Env.fetch("CYPRESS_RAILS_BASE_PATH", default: "/"),
       transactional_server: Env.fetch("CYPRESS_RAILS_TRANSACTIONAL_SERVER", type: :boolean, default: true),
       cypress_cli_opts: Env.fetch("CYPRESS_RAILS_CYPRESS_OPTS", default: "")
@@ -19,6 +20,7 @@ module CypressRails
         ============================
          CYPRESS_RAILS_DIR.....................#{dir.inspect}
          CYPRESS_RAILS_PORT....................#{port.inspect}
+         CYPRESS_RAILS_HOST....................#{host.inspect}
          CYPRESS_RAILS_BASE_PATH...............#{base_path.inspect}
          CYPRESS_RAILS_TRANSACTIONAL_SERVER....#{transactional_server.inspect}
          CYPRESS_RAILS_CYPRESS_OPTS............#{cypress_cli_opts.inspect}
