@@ -1,7 +1,7 @@
 require_relative "env"
 
 module CypressRails
-  class Config < Struct.new(:dir, :port, :base_path, :transactional_server, :cypress_cli_opts, keyword_init: true)
+  class Config < Struct.new(:dir, :port, :host, :base_path, :transactional_server, :cypress_cli_opts, keyword_init: true)
     def initialize(
       dir: Env.fetch("CYPRESS_RAILS_DIR", default: Dir.pwd),
       port: Env.fetch("CYPRESS_RAILS_PORT"),
