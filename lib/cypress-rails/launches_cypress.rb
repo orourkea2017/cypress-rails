@@ -28,7 +28,7 @@ module CypressRails
       set_exit_hooks!(config)
 
       command = <<~EXEC
-        CYPRESS_BASE_URL="http://#{server.host}:#{server.port}#{config.base_path}" "#{bin}" #{command} --project "#{config.dir}" #{config.cypress_cli_opts}
+        CYPRESS_BASE_URL="#{config.base_path}" "#{bin}" #{command} --project "#{config.dir}" #{config.cypress_cli_opts}
       EXEC
 
       puts "\nLaunching Cypress…\n$ #{command}\n"
