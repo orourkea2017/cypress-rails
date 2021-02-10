@@ -1,3 +1,5 @@
+A version of cypress-rails using Rails 5, that uses supplied base path as cypress base url, with additional environment variable to customise Cypress spec directory.
+
 # cypress-rails
 
 [![CircleCI](https://circleci.com/gh/testdouble/cypress-rails/tree/master.svg?style=svg)](https://circleci.com/gh/testdouble/cypress-rails/tree/master)
@@ -158,6 +160,7 @@ preferred environment variables project-wide using a tool like
 
 
 * **CYPRESS_RAILS_DIR** (default: `Dir.pwd`) the directory of your project
+* **CYPRESS_RAILS_SPEC_DIR** (default: `spec`) the directory containing Cypress specs to run
 * **CYPRESS_RAILS_PORT** (default: _a random available port_) the port to run
   the Rails test server on
 * **CYPRESS_RAILS_BASE_PATH** (default: `"/"`) the base path for all Cypress's
